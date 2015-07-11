@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-size: 16px;
+  height: 100%;
+}
+
+.container-fluid {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.superhero {
+  background: none 50% 50% no-repeat scroll transparent;
+  background-image: linear-gradient(rgba(100, 100, 100, .5), rgba(100, 100, 100, .5)),
+     url("../images/road.jpg");
+  height: 100%;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+}
+
+.sidekick {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  left: 0;
+  color: #fafafa;
+}
+
+.about {
+  padding: 20px 0;
+}
+
+.recommendations {
+  background-color: grey;
+}
+
+.road {
+  background: url("../images/roadline.png") 50% 0 repeat-y scroll transparent;
+}

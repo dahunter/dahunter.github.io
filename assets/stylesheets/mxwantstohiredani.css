@@ -30,14 +30,124 @@ html, body {
   color: #fafafa;
 }
 
+.content-section {
+  padding: 50px 0;
+}
+
+.section-heading {
+  padding: 10px 0 30px;
+  text-align: center;
+}
+
 .about {
-  padding: 20px 0;
+}
+
+.highlight {
+  margin-top: 50px;
+}
+
+.highlight-header {
+  text-align: center;
+}
+
+.highlight-header .fa {
+  font-size: 80px;  
+}
+
+.road {
+  background: url("../images/roadpattern.png") 50% -25px repeat-y scroll transparent;
+}
+
+.road-section-heading {
+  margin-top: -50px;
+  background-color: white;
+  padding: 60px 0 0;
+}
+
+.road-start-icon {
+  font-size: 65px;
+}
+
+.landmark {
+  border: 10px solid #333;
+  padding: 30px;
+  position: relative;
+}
+
+.landmark-left {
+  margin-right: 100px;
+}
+
+.landmark-left:after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: 50%;
+  margin-top: -15px;
+  border-width: 15px 0 15px 50px;
+  border-color: transparent #333;
+  border-style: solid;
+  display: block;
+}
+
+.landmark-right {
+  margin-left: 100px;
+}
+
+.landmark-right:after {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  margin-top: -30px;
+  border-width: 30px 50px 30px 0;
+  border-color: transparent #333;
+  border-style: solid;
+  display: block;
+}
+
+.landmark-heading {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.road-section-ending {
+  margin-top: 54px;
+  margin-bottom: -50px;
+  background-color: white;
+  padding: 0 0 60px 0;
 }
 
 .recommendations {
   background-color: grey;
 }
 
-.road {
-  background: url("../images/roadline.png") 50% 0 repeat-y scroll transparent;
+.recommend {
+  border-radius: 10px;
+  background-color: white;
+  padding: 20px;
+}
+
+.recommend:before {
+  font-size: 32px;
+  color: #333;
+  font-family: "FontAwesome";
+  content: "\f10d";
+  float: left;
+}
+
+.recommend:after {
+
+}
+
+.recommend-body {
+  margin-left: 50px;
+}
+
+.recommend-source {
+  clear: both;
+  background-color: transparent;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
 }

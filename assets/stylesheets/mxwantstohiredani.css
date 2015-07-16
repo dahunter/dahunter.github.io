@@ -14,8 +14,8 @@ html, body {
 
 .superhero {
   background: none 50% 50% no-repeat scroll transparent;
-  background-image: linear-gradient(rgba(100, 100, 100, .5), rgba(100, 100, 100, .5)),
-     url("../images/road2.jpg");
+  background-image: linear-gradient(rgba(100, 100, 100, 0), rgba(100, 100, 100, 0)),
+     url("../images/road3.jpg");
   height: 100%;
   background-size: cover;
   text-align: center;
@@ -24,7 +24,7 @@ html, body {
 
 .sidekick {
   position: absolute;
-  top: 25%;
+  top: 30%;
   right: 0;
   left: 0;
   color: #fafafa;
@@ -51,17 +51,19 @@ h2 {
   text-align: center;
 }
 
-.about {
+.intro {
 }
 
-.about-section-heading h2 {
+.intro-section-heading h2 {
 
+}
+
+.highlights {
+  background-color: #777;
 }
 
 .highlight {
-  margin-top: 50px;
   padding: 20px;
-  border-radius: 10px;
   background-color: #f1f1f1;
 }
 
@@ -82,8 +84,8 @@ h2 {
   font-size: 15px;
 }
 
-.road {
-  background: url("../images/roadpattern.png") 50% -3px repeat-y scroll transparent;
+.road-wrapper {
+
 }
 
 .road-section-heading {
@@ -101,9 +103,10 @@ h2 {
 }
 
 .landmark {
-  border: 10px solid #aaa;
+  border: 15px solid #aaa;
   padding: 30px;
   position: relative;
+  width: 100%;
 }
 
 .landmark-left, .landmark-right {
@@ -111,7 +114,8 @@ h2 {
 }
 
 .landmark-left {
-  margin-right: 100px;
+  padding-right: 100px;
+  float: left;
 }
 
 .landmark-left:after {
@@ -149,7 +153,6 @@ h2 {
 }
 
 .road-section-ending {
-  margin-top: 26px;
   margin-bottom: -50px;
   background-color: white;
   padding: 0 0 60px 0;
@@ -160,16 +163,16 @@ h2 {
 }
 
 .recommendations {
-  background-color: #777  ;
+
 }
 
 .recommendations h2 {
-  color: rgb(250, 250, 250);
+  color: black;
 }
 
 .recommend {
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(200, 200, 200, 0.9);
   padding: 20px;
   margin-bottom: 30px;
 }
@@ -197,4 +200,52 @@ h2 {
   padding-top: 20px;
   border-top: 1px solid #ccc;
   font-size: 15px;
+}
+
+footer {
+  background-color: white;
+  margin-top: 40px;
+}
+
+
+
+
+/* Road Magic */
+
+.road-corner {
+  width: 75px;
+  height: 114px;
+  background: none 0 0 no-repeat scroll white;
+}
+
+.road-tl {
+  background-image: url("../images/road-tl.png");
+}
+
+.road-tr {
+  background-image: url("../images/road-tr.png");
+  float: right;
+  background-position: 0 24px;
+}
+
+.road-bl {
+  background-image: url("../images/road-bl.png");
+  float: left;
+}
+
+.road-br {
+  background-image: url("../images/road-br.png");
+}
+
+.road-h {
+  background: url("../images/road-h.png") 0 25px repeat-x scroll transparent;
+  height: 75px;
+  width: 100%;
+  padding: 0 75px;
+}
+
+.road-v {
+  background: url("../images/road-v.png") 25px 0 repeat-y scroll transparent;
+  height: 300px;
+  width: 75px;
 }

@@ -52,36 +52,11 @@ h2 {
 }
 
 .intro {
+  
 }
 
 .intro-section-heading h2 {
 
-}
-
-.highlights {
-  background-color: #777;
-}
-
-.highlight {
-  padding: 20px;
-  background-color: #f1f1f1;
-}
-
-.highlight-header {
-  text-align: center;
-}
-
-.highlight-header .fa {
-  font-size: 80px;
-  color: #aaa;  
-}
-
-.highlight-header h3 {
-  font-size: 22px;
-}
-
-.highlight-body {
-  font-size: 15px;
 }
 
 .road-wrapper {
@@ -102,20 +77,19 @@ h2 {
   font-size: 65px;
 }
 
+.landmark-wrapper {
+  width: 100%;
+  padding: 0 100px;
+}
+
 .landmark {
   border: 15px solid #aaa;
   padding: 30px;
   position: relative;
-  width: 100%;
-}
-
-.landmark-left, .landmark-right {
   border-radius: 25px;
 }
 
 .landmark-left {
-  padding-right: 100px;
-  float: left;
 }
 
 .landmark-left:after {
@@ -131,7 +105,6 @@ h2 {
 }
 
 .landmark-right {
-  margin-left: 100px;
 }
 
 .landmark-right:after {
@@ -161,6 +134,33 @@ h2 {
 .road-section-ending h2 {
   font-size: 50px;
 }
+
+.highlights {
+  background-color: #777;
+}
+
+.highlight {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+.highlight-header {
+  text-align: center;
+}
+
+.highlight-header .fa {
+  font-size: 80px;
+  color: #aaa;  
+}
+
+.highlight-header h3 {
+  font-size: 22px;
+}
+
+.highlight-body {
+  font-size: 15px;
+}
+
 
 .recommendations {
 
@@ -205,6 +205,7 @@ h2 {
 footer {
   background-color: white;
   margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 
@@ -214,12 +215,14 @@ footer {
 
 .road-corner {
   width: 75px;
-  height: 114px;
+  height: 100px;
   background: none 0 0 no-repeat scroll white;
 }
 
 .road-tl {
   background-image: url("../images/road-tl.png");
+  float: left;
+  background-position: 0 24px;
 }
 
 .road-tr {
@@ -235,6 +238,7 @@ footer {
 
 .road-br {
   background-image: url("../images/road-br.png");
+  float: right;
 }
 
 .road-h {
@@ -245,7 +249,17 @@ footer {
 }
 
 .road-v {
-  background: url("../images/road-v.png") 25px 0 repeat-y scroll transparent;
+  background: url("../images/road-v.png") 0 0 repeat-y scroll transparent;
   height: 300px;
   width: 75px;
+}
+
+.road-v-right {
+  float: right;
+  background-position: 25px 0;
+}
+
+.road-v-left {
+  float: left;
+  background-position: 1px;
 }

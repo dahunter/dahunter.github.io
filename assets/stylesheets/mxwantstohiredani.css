@@ -1,11 +1,16 @@
+/*** Overall Styles       ****************************************/
+
 * {
   box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
 html, body {
   font-size: 18px;
   height: 100%;
   font-family: "Lato";
+  color: #3498db;
+  width: 100%;
 }
 
 .container-fluid {
@@ -13,14 +18,36 @@ html, body {
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 130px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+/*** Superhero            ****************************************/
+
 .superhero {
   background: none 50% 50% no-repeat scroll transparent;
-  background-image: linear-gradient(rgba(100, 100, 100, 0), rgba(100, 100, 100, .5)),
-     url("../images/road3.jpg");
+  background-image: url("../images/road3.jpg");
   height: 100%;
   background-size: cover;
   text-align: center;
   position: relative;
+  width: 100%;
+}
+
+.superhero:after {
+  content: "\f078";
+  font-family: "FontAwesome";
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .sidekick {
@@ -32,20 +59,14 @@ html, body {
   color: #fafafa;
 }
 
-h1 {
-  font-size: 130px;
-}
-
-h2 {
-  font-size: 30px;
-}
-
 .sidekick div {
   font-size: 25px;
 }
 
+/*** Content Sections     ****************************************/
+
 .content-section {
-  padding: 50px 0;
+  padding: 75px 0;
 }
 
 .section-heading {
@@ -54,58 +75,38 @@ h2 {
   font-family: "Oswald";
 }
 
-.intro {
-  padding-bottom: 0;
-}
-
-.intro-section-heading h2 {
+.section-heading h2 {
   font-size: 40px;
 }
+/*** Intro Section        ****************************************/
 
-.intro-section-body {
-  float: right;
+.intro {
+  background-color: #3498db;
+  color: white;
+  font-size: 22px;
 }
 
-.road-wrapper {
-
-}
-
-.road {
-  padding-top: 0;
-}
-
-.road-section-heading {
-  margin-top: -20px;
-  background-color: white;
-
-}
-
-.road-section-heading h2 {
-  font-size: 50px;
-}
-
-.road-start-icon {
-  font-size: 115px;
-  color: rgba(156, 121, 91, 1);
-  margin-left: 20px;
-  margin-top: -40px;
-}
+/*** Landmarks            ****************************************/
 
 .landmark-wrapper {
   width: 100%;
-  padding: 0 100px;
+  padding: 0 75px;
 }
 
 .landmark {
-  border: 15px solid #aaa;
   padding: 30px;
   position: relative;
   border-radius: 25px;
-  font-size: 16px;
-  background-color: white;
+  background-color: #1abc9c;
+  color: white;
 }
 
-.landmark-left {
+.landmark-body p {
+  margin-bottom: 25px;
+}
+
+.landmark-body p:last-child {
+  margin-bottom: 0;
 }
 
 .landmark-left:after {
@@ -115,12 +116,9 @@ h2 {
   top: 50%;
   margin-top: -30px;
   border-width: 30px 0 30px 50px;
-  border-color: transparent #aaa;
+  border-color: transparent #1abc9c;
   border-style: solid;
   display: block;
-}
-
-.landmark-right {
 }
 
 .landmark-right:after {
@@ -130,7 +128,7 @@ h2 {
   top: 50%;
   margin-top: -30px;
   border-width: 30px 50px 30px 0;
-  border-color: transparent #aaa;
+  border-color: transparent #1abc9c;
   border-style: solid;
   display: block;
 }
@@ -142,22 +140,29 @@ h2 {
   font-family: "Oswald";
 }
 
-.highlights {
-  background-color: rgba(67, 180, 161, .7);
+.landmark-heading:after {
+  content: "";
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 240px;
+  padding-top: 15px;
+  border-bottom: 1px solid white;
 }
 
-.highlights-section-heading {
-  padding-top: 0;
+/*** Highlights           ****************************************/
+
+.highlights {
+  background-color: #34495e;
+  color: white;
+}
+
+.highlight {
+  padding: 20px 5px 0;
 }
 
 .highlights-section-heading h2 {
   margin-top: 0;
-}
-
-.highlight {
-  padding: 20px;
-  background-color: white;
-  margin-bottom: 15px;
 }
 
 .highlight-header {
@@ -167,7 +172,7 @@ h2 {
 
 .highlight-header .fa {
   font-size: 80px;
-  color: #aaa;  
+  color: #1abc9c;  
 }
 
 .highlight-header h3 {
@@ -178,32 +183,31 @@ h2 {
   font-size: 15px;
 }
 
+/*** Outro                ****************************************/
 
-.recommendations {
-
+.outro {
+  background-color: #3498db;
+  color: white;
+  font-size: 22px;
 }
 
-.recommendations h2 {
-  color: black;
-}
+/*** Recommendations      ****************************************/
+
+.recommendations {}
 
 .recommend {
   border-radius: 10px;
-  background-color: rgba(241,241,241,.9);
+  background-color: #ecf0f1;
   padding: 20px;
   margin-bottom: 30px;
+  color: #34495e;
 }
 
 .recommend:before {
   font-size: 32px;
-  color: #333;
   font-family: "FontAwesome";
   content: "\f10d";
   float: left;
-}
-
-.recommend:after {
-
 }
 
 .recommend-body {
@@ -219,37 +223,16 @@ h2 {
   font-size: 15px;
 }
 
-footer {
-  background-color: white;
-  margin-top: 40px;
-  margin-bottom: 40px;
+.source-name {
+  font-size: 18px;
+  color: #3498db;
 }
 
-.outro-section-body {
-
+.source-title {
+  color: #34495e;
 }
 
-.road-section-ending {
-  margin-bottom: -50px;
-  background-color: white;
-  padding: 0 0 60px 0;
-}
-
-.road-section-ending h2 {
-  font-size: 50px;
-}
-
-.road-end-icon {
-  font-size: 115px;
-  color: rgba(156, 121, 91, 1);
-  margin-left: 10px;
-  margin-top: -40px;
-}
-
-
-
-
-/* Road Magic */
+/*** Road BG Magic        ****************************************/
 
 .road-corner {
   width: 75px;
@@ -259,23 +242,25 @@ footer {
 
 .road-tl {
   background-image: url("../images/road-tl.png");
+  background-position: -1px 24px;
   float: left;
-  background-position: 0 24px;
 }
 
 .road-tr {
   background-image: url("../images/road-tr.png");
-  float: right;
   background-position: 0 24px;
+  float: right;
 }
 
 .road-bl {
   background-image: url("../images/road-bl.png");
+  background-position: -1px 0;
   float: left;
 }
 
 .road-br {
   background-image: url("../images/road-br.png");
+  background-position: 0 0;
   float: right;
 }
 
@@ -286,52 +271,141 @@ footer {
   padding: 0 75px;
 }
 
-.road-v {
-  background: url("../images/road-v.png") 0 0 repeat-y scroll transparent;
-  height: 300px;
-  width: 75px;
-}
-
 .road-v-right {
-  float: right;
-  background-position: 25px 0;
+  background: url("../images/road-v.png") 100% 0 repeat-y scroll transparent;
 }
 
 .road-v-left {
-  float: left;
-  background-position: 1px 0;
+  background: url("../images/road-v.png") 0 0 repeat-y scroll transparent;
 }
+
+/*** Mobile tweaks        ****************************************/
 
 @media (max-width: 768px) { 
   .landmark-wrapper {
     padding: 0;
   }
-
-  .landmark-left:after {
-    content: "";
-    position: absolute;
-    right: 45%;
-    top: 100%;
-    margin-top: 0;
-    border-width: 50px 30px 0 30px;
-    border-color: #aaa transparent;
-    border-style: solid;
-    display: block;
+  
+  .road-v-right,
+  .road-v-left {
+    background-image: none;
   }
 
+  .landmark-left:after,
   .landmark-right:after {
-    content: "";
-    position: absolute;
-    left: 45%;
+    right: 50%;
+    left: auto;
     top: 100%;
     margin-top: 0;
+    margin-right: -30px;
     border-width: 50px 30px 0 30px;
-    border-color: #aaa transparent;
-    border-style: solid;
-    display: block;
+    border-color: #1abc9c transparent;
+    z-index: 1;
   }
 
   .highlight {
     margin: 30px 15px;
   }
+}
+
+/*** Animation            ****************************************/
+
+@-webkit-keyframes scrollCue {
+  0% {
+    -webkit-transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -30%, 0);
+    visibility: visible;
+  }
+
+  20% {
+    -webkit-transform: translate3d(0, -15%, 0);
+    transform: translate3d(0, -15%, 0);
+    visibility: visible;
+  }
+
+  40% {
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes scrollCue {
+  0% {
+    -webkit-transform: translate3d(0, -30%, 0);
+    transform: translate3d(0, -30%, 0);
+    visibility: visible;
+  }
+
+  20% {
+    -webkit-transform: translate3d(0, -15%, 0);
+    transform: translate3d(0, -15%, 0);
+    visibility: visible;
+  }
+
+  40% {
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes sidekick {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes sidekick {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -10%, 0);
+    transform: translate3d(0, -10%, 0);
+    visibility: visible;
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.sidekick {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: sidekick;
+  animation-name: sidekick;
+}
+
+.superhero:after {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: scrollCue;
+  animation-name: scrollCue;
 }

@@ -3,7 +3,7 @@
 }
 
 html, body {
-  font-size: 16px;
+  font-size: 18px;
   height: 100%;
   font-family: "Lato";
 }
@@ -59,7 +59,7 @@ h2 {
 }
 
 .intro-section-heading h2 {
-
+  font-size: 40px;
 }
 
 .intro-section-body {
@@ -101,6 +101,8 @@ h2 {
   padding: 30px;
   position: relative;
   border-radius: 25px;
+  font-size: 16px;
+  background-color: white;
 }
 
 .landmark-left {
@@ -155,6 +157,7 @@ h2 {
 .highlight {
   padding: 20px;
   background-color: white;
+  margin-bottom: 15px;
 }
 
 .highlight-header {
@@ -297,4 +300,38 @@ footer {
 .road-v-left {
   float: left;
   background-position: 1px 0;
+}
+
+@media (max-width: 768px) { 
+  .landmark-wrapper {
+    padding: 0;
+  }
+
+  .landmark-left:after {
+    content: "";
+    position: absolute;
+    right: 45%;
+    top: 100%;
+    margin-top: 0;
+    border-width: 50px 30px 0 30px;
+    border-color: #aaa transparent;
+    border-style: solid;
+    display: block;
+  }
+
+  .landmark-right:after {
+    content: "";
+    position: absolute;
+    left: 45%;
+    top: 100%;
+    margin-top: 0;
+    border-width: 50px 30px 0 30px;
+    border-color: #aaa transparent;
+    border-style: solid;
+    display: block;
+  }
+
+  .highlight {
+    margin: 30px 15px;
+  }
 }
